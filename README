@@ -360,17 +360,7 @@ B.9 be.ulg.vervier.SmtpDump.Utils: utility classes
 
 C. Miscellaneous files:
 
-C.1 A makefile and an application launcher for SmtpDump.
+C.1 A makefile
 
 Files:
     Makefile
-    smtpdump
-
-C.2 The signature definition file containing the manually defined signatures for
-the elven spam bots identified from the network logs analyzed. The file
-'macro.def' containing definitions of macros for use in a signature file is also
-provided.
-
-File:
-    bots.sig
-    macro.def
