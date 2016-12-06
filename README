@@ -122,32 +122,6 @@ Usage:
 Example:
     ./smtpdump -b
 
-I. SmtpDump comes with a little python script allowing to plot the traffic
-profile of identified clients. Based on a database output by the system, it
-provides four parameters, including the number of SMTP and TCP sessions
-initiated and the number of SMTP and TCP packets sent, to draw the clients
-traffic profile over time. The output of the script is a PNG picture of each
-client profile.
-
-Note: Unfortunately, the plotter script relies on a third party package named
-"matplotlib" which cannot be provided as a simple package file like java
-packages. However, it is available for download on different platforms at the
-following address http://matplotlib.sourceforge.net/users/installing.html. There
-is also a prebuilt package version for many Linux distributions. For Windows and
-Mac OS X, it may already be part of the python distribution.
-
-Usage:
-    -d <input-database>
-    -t <traffic-type>
-where <traffic-type> is one of the four parameters below
-    'smtp_sessions'
-    'tcp_sessions'
-    'smtp_packets'
-    'tcp_packets'
-    
-Example:
-    pyhton Plotter.py -d database.db -t smtp_sessions
-
 ################################################################################
 #                   2. Interpreting running information                        #
 ################################################################################
@@ -400,43 +374,3 @@ provided.
 File:
     bots.sig
     macro.def
-
-################################################################################
-#                           6. Plotter files summary                           #
-################################################################################
-
-The python script for plotting the traffic profile of identified spam bots
-consists of 2 files.
-
-- Plotter.py: responsible for generating the graphs for each spam bot identified
-in the database
-- DBQuerier.py: responsible for performing queries on the database
-
-################################################################################
-#                          7. Resource files summary                           #
-################################################################################
-
-A. The database storing the information recorded on the eleven identified spam
-bots.
-
-File:
-    spambots.db
-    
-B. The eleven PNG pictures representing the traffic profile of identified spam
-bots.
-
-Files:
-    Client1.png
-    Client3.png
-    Client4.png
-    Client5.png
-    Client6.png
-    Client7.png
-    Client8.png
-    Client9.png
-    Client10.png
-    Client11.png
-    Client12.png
-
-Note: The graph can be empty when the client has only been observed during
-a single day.
